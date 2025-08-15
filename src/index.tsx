@@ -1,15 +1,15 @@
 import { render } from 'preact';
 
-import preactLogo from './assets/preact.svg';
+import pageLogo from './assets/secure polling.svg';
 import './style.css';
 
 export function App() {
 	return (
 		<div>
-			<a href="https://preactjs.com" target="_blank">
-				<img src={preactLogo} alt="Preact logo" height="160" width="160" />
+			<a href="https://securepollingsystem.org/" target="_blank">
+				<img src={pageLogo} alt="secure polling system logo" height="300" width="300" />
 			</a>
-			<h1>Get Started building Vite-powered Preact Apps </h1>
+			<h1>Secure Polling System Administrator Console</h1>
 			<section>
 				<Resource
 					title="Learn Preact"
