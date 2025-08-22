@@ -14,6 +14,8 @@
 -   blinding using Schnorr is possible using libsodium but Schnorr requires a multi-step signing process which forbids concurrency, meaning the voter and registrar have to dance back and forth together before registrar can start dancing with someone else, lest the dancees collaborate to create an unearned signature https://nickler.ninja/slides/2018-bob.pdf see also https://github.com/jedisct1/libsodium/issues/831
 -   pairing is required for the kind of blinding where there's no back-and-forth, but libsodium doesn't support pairing, so we might use ChainSafe which is very well reviewed https://github.com/ChainSafe/bls
 -   There's also this https://www.npmjs.com/package/bls-signatures AKA https://github.com/Chia-Network/bls-signatures (in C++/Python and no longer maintained)
+-   you have to modify the message by blinding it. That's what's happening on L178-180 here https://github.com/hammurabi-mendes/learn-crypto-javascript/blob/main/asymmetric-noble.mjs#L160-L207
+-   see https://github.com/securepollingsystem/my-preact-app/pull/1/commits/01f75745e7cb0a10dca4ba54c6e25d600973a17e for complete implementation
 
 ## Getting Started
 
